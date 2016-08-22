@@ -1,0 +1,17 @@
+---
+layout: default
+title: Offers
+class: offers
+nav-order: 6
+---
+
+{% include page-header.html %}
+
+<section class="page__offers row--padding">
+  <div class="row">
+    {% assign offers = site.data.offers %}
+    {% for offer in offers %}
+      {% include offer-block.html %}
+    {% endfor %}
+  </div>
+</section>

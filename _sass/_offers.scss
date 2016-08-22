@@ -2,7 +2,8 @@
 
 
 .offer {
-  background-color: $light-grey;
+  background-color: $white;
+  @include box-shadow;
   .row__column{
     margin-top: 0;
   }
@@ -40,21 +41,24 @@
 
 .offer__content-title {
   margin-bottom: .482em;
-  font-size: 1.728em;
+  font-size: 2.2em;
 }
 
 .offer__content-subtitle {
   margin-bottom: .833em;
-  font-size: 1.2em;
+  font-size: 1em;
+  font-weight: 400;
   line-height: 1.44;
+  text-transform: uppercase;
+  letter-spacing: .25em;
   &:before {
     content: "";
     display: inline-block;
     height: 1em;
     width: .833em;
-    margin-right: .482em;
+    margin-right: .8em;
     margin-bottom: .2em;
-    vertical-align: bottom;
+    vertical-align: middle;
     background-image: url( "../img/icon/map-pin.png" );
     background-position: center;
     background-repeat: no-repeat;

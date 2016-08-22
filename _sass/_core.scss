@@ -19,7 +19,7 @@ $black-5:     rgba(0,0,0,.5);
 $black-66:    rgba(0,0,0,.66);
 $black-75:    rgba(0,0,0,.75);
 $black-85:    rgba(0,0,0,.85);
-$text-black:  #0d0d0d;
+$text-black:  #4d4d4d;
 
 $se-orange:       #ff8c00;
 $se-orange-20:    rgba(255,140,0,.20);
@@ -31,12 +31,16 @@ $se-dark-grey-33: rgba(41,39,40,.33);
 $se-dark-grey-5:  rgba(41,39,40,.5);
 $se-dark-grey-85: rgba(41,39,40,.85);
 
+// brussels colours
+$b-red-light:    #efe5e0;
+$b-gray-light:   #f4f4f4;
+$b-yellow-light: #f5f3e9;
 
 // -------- breakpoints --------
 
 $xxlarge: 970px;
 $xlarge:  850px;
-$large:   650px;
+$large:   700px;
 $medium:  450px;
 $small:   300px;
 
@@ -161,3 +165,22 @@ $z-background:      -1;
 .bg-image-ratio--3-2:before   { padding-top: 66.666666666667%; }
 .bg-image-ratio--16-9:before  { padding-top: 56.25%; }
 .bg-image-ratio--21-9:before  { padding-top: 42.8571429%; }
+
+
+// -------- generic styles --------
+
+// text shadow for title
+@mixin text-shadow { text-shadow: 0px 5px 20px rgba(42, 9, 10, 0.33); }
+.text-shadow { @include text-shadow; }
+
+// box-shadow
+@mixin box-shadow { box-shadow: 0px 12px 50px 0px rgba(42, 9, 10, 0.15); }
+.box-shadow { @include box-shadow; }
+
+// standard bg position, repeat, etc
+@mixin background-attributes {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-size: cover;
+}

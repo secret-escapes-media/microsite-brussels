@@ -12,31 +12,6 @@
 }
 
 
-// ---------- Background images ----------
-
-.section--fixed-bg {
-  padding-top: 8em;
-  padding-bottom: 8em;
-  color: $white;
-  background-color: $se-light-grey;
-  background: $se-light-grey center no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  p { font-weight: 400; }
-  .page-content &:first-child:before {
-    content: '';
-    display: block;
-    height: 3.375em;
-  }
-}
-
-.overview .intro        { background-image: url('../img/bg/bg-01.jpg'); }
-.overview .another      { background-image: url('../img/bg/bg-02.jpg'); }
-.example-page .intro    { background-image: url('../img/bg/bg-04.jpg'); }
-.example-page .another  { background-image: url('../img/bg/bg-03.jpg'); }
-.offers .intro          { background-image: url('../img/bg/bg-05.jpg'); }
-
-
 // ---------- button ----------
 
 .btn {
@@ -51,5 +26,141 @@
     background-color: $se-orange;
     text-decoration: none;
   }
+  &--large { font-size: 1.2em; }
+  &--extra-spacing { margin-top: 2em; }
   * + & { margin-top: 1em; }
+}
+
+// ---------- home page styles ----------
+.overview-nav {
+  padding-top: 1px; margin-top: -1px; // fix for parent inheriting child margin
+  padding-bottom: $margin;
+  &__wrap {
+    margin-top: -($margin * 2);
+    @include box-shadow;
+  }
+  &__item {
+    position: relative;
+    display: block;
+    height: 7.5em;
+    color: $white;
+    font-family: $special-font-family;
+    font-size: 3.375em;
+    text-align: center;
+    line-height: 1;
+    background-color: $black-33;
+    text-shadow: 0 0 0 rgba(0,0,0,0);
+    @include background-attributes;
+    @include transition;
+    span {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      padding-left: ($margin / 2);
+      padding-right: ($margin / 2);
+      transform: translateY(-50%);
+      @include transition;
+    }
+    &:hover {
+      text-decoration: none;
+      span {
+        transform: translateY(-66%);
+        text-shadow: 0px 5px 8px $black-33;
+      }
+    }
+    @include bp(xlarge) {
+      @include gallery(6);
+      // &:nth-child(-n+2) {
+      //   margin-top: 0;
+      // }
+    };
+  }
+}
+
+// ---------- page-specific styles ----------
+// TODO: probably a much cleaner way to do these color changes
+.food-and-drink,
+.hidden-gems,
+.overview {
+  .page__content,
+  .page__offers,
+  .overview-nav { background-color: #e9f0f6; }
+  h2, h3, .offer__content-price {
+    color: #152b3e;
+  }
+  .btn{
+    border-color: #213e50;
+    &:hover { background-color: #213e50; }
+  }
+}
+
+.hidden-gems {
+  // .page__header       { background-position: center 80%; }
+  .page__content,
+  .page__offers,
+  .overview-nav       { background-color: #efeeeb; }
+  h2, h3              { color: #554b42; }
+  .page__offers-title { color: #42382f; }
+  .btn{
+    border-color: #8e5d2d;
+    &:hover { background-color: #8e5d2d; }
+  }
+}
+
+.art-and-design {
+  .page__header       { background-position: center 80%; }
+  .page__content,
+  .page__offers,
+  .overview-nav       { background-color: #ebeaf1; }
+  h2, h3              { color: #23144a; }
+  .page__offers-title { color: #1c0c3e; }
+  .btn{
+    border-color: #23144a;
+    &:hover { background-color: #23144a; }
+  }
+}
+
+.whats-on {
+  .page__header{
+    background-position: center 33.33%;
+  }
+  .page__content,
+  .page__offers,
+  .overview-nav { background-color: #f2f6ef; }
+  h2, h3{
+    color: #426020;
+  }
+  .page__offers-title{
+    color: #24370e;
+  }
+  .btn{
+    border-color: #8bc34a;
+    &:hover { background-color: #8bc34a; }
+  }
+}
+
+
+.overview{
+  .page__header-title { margin-bottom: .075em; }
+}
+
+.offers {
+  .page__content,
+  .page__offers,
+  .overview-nav { background-color: #efe5e0; }
+  h2, h3, .offer__content-price {
+    color: #5a1213;
+  }
+  .btn{
+    border-color: #80220d;
+    &:hover { background-color: #80220d; }
+  }
+  .page__header { background-position: center 80%; }
+  .page__offers {
+    padding-top: 1px; margin-top: -1px; // fix for parent inheriting child margin
+    > .row {
+      margin-top: -($margin * 2);
+    }
+  }
 }

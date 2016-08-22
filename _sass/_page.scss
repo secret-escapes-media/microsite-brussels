@@ -1,0 +1,90 @@
+// styles for the deafault content page
+
+
+$wrap-padding: 2.2em;
+
+.page {
+  &__header {
+    padding-top: ($margin * 8);
+    padding-bottom: ($margin * 8);
+    color: $white;
+    text-align: center;
+    @include background-attributes;
+    background-color: $black-66;
+    &-title {
+      font-family: $special-font-family;
+      font-size: 6.2em;
+      font-style: italic;
+      font-weight: bolder;
+      letter-spacing: .025em;
+      line-height: 1;
+      @include text-shadow;
+    }
+    &-subtitle {
+      text-transform: uppercase;
+      letter-spacing: .5em;
+      font-size: 1.5em;
+      font-family: $main-font-family;
+      font-weight: 400;
+      line-height: 1.25;
+      @include text-shadow;
+    }
+  }
+
+  &__content {
+    padding-top: 1px; margin-top: -1px; // fix for parent inheriting child margin
+    padding-bottom: $margin;
+    &-wrap {
+      margin-top: -($margin * 2);
+      padding: $wrap-padding;
+      background-color: $white;
+      @include box-shadow;
+    }
+  }
+  &__offers {
+    &-title {
+      text-align: center;
+      font-family: $special-font-family;
+      font-size: 4.4em;
+      font-style: italic;
+      font-weight: bolder;
+      letter-spacing: .025em;
+      line-height: 1;
+      overflow: hidden;
+        // hrs either side of title
+        span {
+        position: relative;
+        display: inline-block;
+        &:before,
+        &:after {
+          content: '';
+          position: absolute;
+          top: 60%;
+          height: 1px;
+          margin-top: -1px;
+          width: 300%;
+          background-color: $white;
+        }
+        &:before {
+          right: 100%;
+          margin-right: .5em;
+        }
+        &:after {
+          left: 100%;
+          margin-left: .5em;
+        }
+      }
+    }
+  }
+}
+
+.feature-image {
+  margin-left: -$wrap-padding;
+  margin-right: -$wrap-padding;
+  @include bp(large) {
+    .bg-image-ratio:before { padding-top: 100%; } // 1:1 ratio
+  }
+  @include bp(xlarge) {
+    .bg-image-ratio:before { padding-top: 66.666666666667%; } // 3:2 ratio
+  }
+}

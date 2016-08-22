@@ -95,15 +95,6 @@ section {
   .row--columns-7-5-gutters { @include two-column-grid( 7, 5, gutters ); }
   .row--columns-8-4-gutters { @include two-column-grid( 8, 4, gutters ); }
 
-  // three columns without gutter
-  .row--columns-4-4-4 .row__column { @include gallery(4); }
-
-  // three columns with gutter
-  .row--columns-4-4-4-gutters .row__column {
-    @include gallery($gutters 4);
-    margin-bottom: gutter();
-  }
-
   // vertical align floated columns
   .row--columns-vertical-align {
     display: flex;
@@ -111,3 +102,19 @@ section {
   }
 
 }
+
+
+// Three columns, needs larger breakpoint than two
+.row--columns-4-4-4-gutters .row__column { margin-top: ( $margin / 2 );}
+
+@include bp(xlarge) {
+  // three columns without gutter
+  .row--columns-4-4-4 .row__column { @include gallery(4); }
+
+  // three columns with gutter
+  .row--columns-4-4-4-gutters .row__column {
+    @include gallery($gutters 4);
+    margin-bottom: gutter();
+    margin-top: 0;
+  }
+};

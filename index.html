@@ -5,31 +5,27 @@ class: overview
 nav-order: 1
 ---
 
-<section class="section--fixed-bg intro">
+
+<section class="page__header" style="background-image: url('{{site.baseurl}}/img/bg/{{page.class}}.jpg');">
   <div class="row row--padding">
-    <h1>{{ page.title }}</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae harum quasi magni veniam eos laborum velit, provident laboriosam, distinctio laudantium voluptas natus sapiente nobis, amet. Maiores, quo eum iste quisquam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae harum quasi magni veniam eos laborum velit, provident laboriosam, distinctio laudantium voluptas natus sapiente nobis, amet. Maiores, quo eum iste quisquam!</p>
-    <a href="offers.html" class="btn">Offers</a>
+    <h1 class="page__header-title">Brussels</h1>
+    <p class="page__header-subtitle">Has Surprises Around Every Corner</p>
   </div>
 </section>
 
-<section>
-  <div class="row row--padding row--columns-4-4-4-gutters">
-    <p class="row__column">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae harum quasi magni veniam eos laborum velit, provident laboriosam, distinctio laudantium voluptas natus sapiente nobis, amet. Maiores, quo eum iste quisquam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae harum quasi magni veniam eos laborum velit, provident laboriosam, distinctio laudantium voluptas natus sapiente nobis, amet. Maiores, quo eum iste quisquam!</p>
-    <p class="row__column">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae harum quasi magni veniam eos laborum velit, provident laboriosam, distinctio laudantium voluptas natus sapiente nobis, amet. Maiores, quo eum iste quisquam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae harum quasi magni veniam eos laborum velit, provident laboriosam, distinctio laudantium voluptas natus sapiente nobis, amet. Maiores, quo eum iste quisquam!</p>
-    <p class="row__column">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae harum quasi magni veniam eos laborum velit, provident laboriosam, distinctio laudantium voluptas natus sapiente nobis, amet. Maiores, quo eum iste quisquam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae harum quasi magni veniam eos laborum velit, provident laboriosam, distinctio laudantium voluptas natus sapiente nobis, amet. Maiores, quo eum iste quisquam!</p>
-  </div>
-  <div class="row row--padding">
-    <a href="#" class="btn">button</a>
+<section class="overview-nav row--padding">
+  <div class="overview-nav__wrap row">
+
+  {% assign nav-order = site.pages | sort:"nav-order" %}
+  {% for page in nav-order %}
+    {% if page.layout == "page" %}
+    <a id="overview-nav-{{page.class}}" class="overview-nav__item" href="{{ site.baseurl }}{{ page.url }}" style="background-image: url('{{site.baseurl}}/img/bg/{{page.class}}.jpg');">
+      <span>{{ page.title }}</span>
+    </a>
+    {% endif %}
+  {% endfor %}
+
   </div>
 </section>
 
-<section class="section--fixed-bg another">
-  <div class="row row--padding row--columns-4-8-gutters">
-    <p class="row__column">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae harum quasi magni veniam eos laborum velit, provident laboriosam, distinctio laudantium voluptas natus sapiente nobis, amet. Maiores, quo eum iste quisquam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae harum quasi magni veniam eos laborum velit, provident laboriosam, distinctio laudantium voluptas natus sapiente nobis, amet. Maiores, quo eum iste quisquam!</p>
-    <div class="row__column">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae harum quasi magni veniam eos laborum velit, provident laboriosam, distinctio laudantium voluptas natus sapiente nobis, amet. Maiores, quo eum iste quisquam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae harum quasi magni veniam eos laborum velit, provident laboriosam, distinctio laudantium voluptas natus sapiente nobis, amet. Maiores, quo eum iste quisquam!</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae harum quasi magni veniam eos laborum velit, provident laboriosam, distinctio laudantium voluptas natus sapiente nobis, amet. Maiores, quo eum iste quisquam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae harum quasi magni veniam eos laborum velit, provident laboriosam, distinctio laudantium voluptas natus sapiente nobis, amet. Maiores, quo eum iste quisquam!</p>
-    </div>
-  </div>
-</section>
+{% include page-offers.html %}
