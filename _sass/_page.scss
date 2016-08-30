@@ -5,29 +5,54 @@ $wrap-padding: 2.2em;
 
 .page {
   &__header {
-    padding-top: ($margin * 8);
-    padding-bottom: ($margin * 8);
+    padding-top: ($margin * 6);
+    padding-bottom: ($margin * 6);
     color: $white;
     text-align: center;
     @include background-attributes;
     background-color: $black-66;
+    @include bp(medium) {
+      padding-top: ($margin * 7);
+      padding-bottom: ($margin * 7);
+    }
+    @include bp(large) {
+      padding-top: ($margin * 8);
+      padding-bottom: ($margin * 8);
+    }
     &-title {
       font-family: $special-font-family;
-      font-size: 6.2em;
+      font-size: 4.4em;
       font-style: italic;
       font-weight: bolder;
       letter-spacing: .025em;
       line-height: 1;
       @include text-shadow;
+      @include bp(medium) {
+        font-size: 6.2em;
+      }
     }
     &-subtitle {
       text-transform: uppercase;
       letter-spacing: .5em;
-      font-size: 1.5em;
+      font-size: 1em;
       font-family: $main-font-family;
       font-weight: 400;
       line-height: 1.25;
       @include text-shadow;
+      @include bp(medium) {
+        font-size: 1.5em;
+      };
+    }
+    &-description {
+      max-width: $large;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 1em;
+      line-height: 1.4;
+      font-weight: 400;
+      @include bp(medium) {
+        font-size: 1.2em;
+      }
     }
   }
 

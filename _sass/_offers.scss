@@ -7,68 +7,72 @@
   .row__column{
     margin-top: 0;
   }
-}
-
-.offer__image {
-  position: relative;
-  height: 18em;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
-  background-size: cover;
-  @include bp( large ) {
+  &__image {
+    position: relative;
+    height: 20em;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    background-size: cover;
+    @include bp( large ) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: auto;
+    }
+  }
+  &__image-link {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    height: auto;
   }
-}
-
-.offer__image-link {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
-.offer__content {
-  padding: $margin ($margin * 1.2);
-  p + p { margin-top: .2em; }
-}
-
-.offer__content-title {
-  margin-bottom: .482em;
-  font-size: 2.2em;
-}
-
-.offer__content-subtitle {
-  margin-bottom: .833em;
-  font-size: 1em;
-  font-weight: 400;
-  line-height: 1.44;
-  text-transform: uppercase;
-  letter-spacing: .25em;
-  &:before {
-    content: "";
-    display: inline-block;
-    height: 1em;
-    width: .833em;
-    margin-right: .8em;
-    margin-bottom: .2em;
-    vertical-align: middle;
-    background-image: url( "../img/icon/map-pin.png" );
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-size: contain;
-    .svg & { background-image: url( "../img/icon/map-pin.svg" ); }
+  &__content {
+    padding: $margin ($margin * 1.2);
+    p + p { margin-top: .2em; }
+    .offer--small & {
+      padding: ($margin / 1.33) ($margin / 1.5);
+      p {
+        font-size: 0.9em;
+      }
+    }
   }
-}
+  &__content-title {
+    margin-bottom: .482em;
+    font-size: 2.2em;
+    .offer--small & {
+      font-size: 2em;
+    }
+  }
+  &__content-subtitle {
+    margin-bottom: .833em;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.44;
+    text-transform: uppercase;
+    letter-spacing: .25em;
+    &:before {
+      content: "";
+      display: inline-block;
+      height: 1em;
+      width: .833em;
+      margin-right: .8em;
+      margin-bottom: .2em;
+      vertical-align: middle;
+      background-image: url( "../img/icon/map-pin.png" );
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-size: contain;
+      .svg & { background-image: url( "../img/icon/map-pin.svg" ); }
+    }
+  }
 
-.offer__content-price {
-  font-weight: bold;
-  font-size: 1.44em;
+  &__content-price {
+    font-weight: bold;
+    font-size: 1.44em;
+  }
 }

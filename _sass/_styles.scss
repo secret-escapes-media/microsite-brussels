@@ -33,10 +33,10 @@
 
 // ---------- home page styles ----------
 .overview-nav {
-  padding-top: 1px; margin-top: -1px; // fix for parent inheriting child margin
+  // padding-top: 1px; margin-top: -1px; // fix for parent inheriting child margin
   padding-bottom: $margin;
   &__wrap {
-    margin-top: -($margin * 2);
+    // margin-top: -($margin * 2);
     @include box-shadow;
   }
   &__item {
@@ -46,6 +46,8 @@
     color: $white;
     font-family: $special-font-family;
     font-size: 3.375em;
+    font-style: italic;
+    font-weight: bolder;
     text-align: center;
     line-height: 1;
     background-color: $black-33;
@@ -148,7 +150,7 @@
 .offers {
   .page__content,
   .page__offers,
-  .overview-nav { background-color: #efe5e0; }
+  .overview-nav { background-color: #f8f4f3; }
   h2, h3, .offer__content-price {
     color: #5a1213;
   }
@@ -156,11 +158,40 @@
     border-color: #80220d;
     &:hover { background-color: #80220d; }
   }
-  .page__header { background-position: center 80%; }
+  .page__header {
+    background-position: center 80%;
+    background-size: initial;
+    @include bp(large) {
+      background-position: center 90%;
+      background-size: 100%;
+      background-size: cover;
+    }
+  }
   .page__offers {
     padding-top: 1px; margin-top: -1px; // fix for parent inheriting child margin
     > .row {
       margin-top: -($margin * 2);
     }
+  }
+}
+
+
+// ---------- background image attribution style ----------
+
+.bg-img-attribution {
+  position: absolute;
+  top: -2em;
+  right: 0;
+  height: 2em;
+  padding-left: .75em;
+  padding-right: .75em;
+  color: $white;
+  font-size: .8em;
+  line-height: 2;
+  background-color: $black-5;
+  opacity: .7;
+  @include transition;
+  &:hover {
+    opacity: 1;
   }
 }

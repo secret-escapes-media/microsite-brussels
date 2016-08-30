@@ -170,11 +170,11 @@ $z-background:      -1;
 // -------- generic styles --------
 
 // text shadow for title
-@mixin text-shadow { text-shadow: 0px 5px 20px rgba(42, 9, 10, 0.33); }
+@mixin text-shadow { text-shadow: 0px 5px 20px rgba(0,0,0,.33); }
 .text-shadow { @include text-shadow; }
 
 // box-shadow
-@mixin box-shadow { box-shadow: 0px 12px 50px 0px rgba(42, 9, 10, 0.15); }
+@mixin box-shadow { box-shadow: 0px 12px 50px 0px rgba(0,0,0,.15); }
 .box-shadow { @include box-shadow; }
 
 // standard bg position, repeat, etc
