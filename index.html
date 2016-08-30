@@ -8,24 +8,28 @@ nav-order: 1
 
 <section class="page__header" style="background-image: url('{{site.baseurl}}/img/bg/{{page.class}}.jpg');">
   <div class="row row--padding">
+    <div class="page__header-subtitle">Beat it to:</div>
     <h1 class="page__header-title">Brussels</h1>
-    <p class="page__header-subtitle">Has Surprises Around Every Corner</p>
   </div>
 </section>
 
-<section class="overview-nav row--padding">
-  <div class="overview-nav__wrap row">
-
-  {% assign nav-order = site.pages | sort:"nav-order" %}
-  {% for page in nav-order %}
-    {% if page.layout == "page" %}
-    <a id="overview-nav-{{page.class}}" class="overview-nav__item" href="{{ site.baseurl }}{{ page.url }}" style="background-image: url('{{site.baseurl}}/img/bg/{{page.class}}.jpg');">
-      <span>{{ page.title }}</span>
-    </a>
-    {% endif %}
-  {% endfor %}
-
+<section class="page__content row--padding">
+  <div class="page__content-wrap row">
+    <p>The new and the Art Nouveau exist side by side in Belgium’s laissez-faire capital. From the magnificent Grand Place – one of the most beautiful squares in Europe – to the fresh crop of stylish hotels and restaurants, this must-visit city fascinates at every turn. Shop antiques in the fashionable Sablon area, discover homegrown Belgian designers amid the high-end boutiques and visit museums, bustling cafés and art exhibitions. If you’re there in October, don’t miss The Designers Trail at MODO Brussels – a three-day event celebrating the city’s creative talent with a programme of special events and parties.</p>
+  </div>
+  <div class="overview-nav">
+    <div class="overview-nav__wrap row">
+      {% assign nav-order = site.pages | sort:"nav-order" %}
+      {% for page in nav-order %}
+      {% if page.layout == "page" %}
+      <a id="overview-nav-{{page.class}}" class="overview-nav__item" href="{{ site.baseurl }}{{ page.url }}" style="background-image: url('{{site.baseurl}}/img/bg/{{page.class}}.jpg');">
+        <span>{{ page.title }}</span>
+      </a>
+      {% endif %}
+      {% endfor %}
+    </div>
   </div>
 </section>
+
 
 {% include page-offers.html %}

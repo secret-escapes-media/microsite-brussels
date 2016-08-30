@@ -5,7 +5,12 @@ class: offers
 nav-order: 6
 ---
 
-{% include page-header.html %}
+<section class="page__header" style="background-image: url('{{site.baseurl}}/img/bg/{{page.class}}.jpg');">
+  <div class="row row--padding">
+    <h1 class="page__header-title">{{ page.title }}</h1>
+    <p class="page__header-description">From a contemporary hotel with a Michelin-starred restaurant to a skyscraper with panoramic city views, check out some of our hand-picked stays in Brussels.</p>
+  </div>
+</section>
 
 <section class="page__offers row--padding">
   <div class="row">

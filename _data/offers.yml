@@ -1,26 +1,31 @@
-  - title: An offer
-    category: category-1
-    class: a-third-offer
-    location: Region, Country
-    description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure architecto eum exercitationem neque.
-    price: 999999
-    price-description: per room per night
-    link: #
+- title: Radisson Blu Royal Hotel
+  class: radisson-blu-royal-hotel
+  location: Brussels, Belgium
+  description: A central, contemporary hotel with a Michelin-star restaurant - includes breakfast
+  price: 87
+  price-description: per room per night
+  link:  https://www.secretescapes.com/radisson-blu-royal-hotel-brussels-belgium/sale?utm_source=SE&utm_medium=hub_email&utm_campaign=brussels_20160829
 
-  - title: Another offer
-    category: category-2
-    class: another-offer
-    location: Region, Country
-    description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure architecto eum exercitationem neque.
-    price: 999999
-    price-description: per room per night
-    link: #
+- title: Hotel Metropole
+  class: hotel-metropole
+  location: Brussels, Belgium
+  description: A dazzling five-star Brussels hotel, with breakfast and a dining discount
+  price: 101
+  price-description: per room per night
+  link: https://www.secretescapes.com/hotel-metropole-belgium-brussels/sale?utm_source=SE&utm_medium=hub_email&utm_campaign=brussels_20160829
 
-  - title: A third offer
-    category: category-3
-    class: a-third-offer
-    location: Region, Country
-    description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure architecto eum exercitationem neque.
-    price: 999999
-    price-description: per room per night
-    link: #
+- title: The Hotel
+  class: the-hotel
+  location: Brussels, Belgium
+  description: A top-ranking, sky-high hotel with panoramic views of Brussels and elegant interiors
+  price: 87
+  price-description: per room per night
+  link: https://www.secretescapes.com/the-hotel-brussels-belgium/sale?utm_source=SE&utm_medium=hub_email&utm_campaign=brussels_20160829
+
+- title: Pentahotel Brussels City Centre
+  class: pentahotel-brussels-city-centre
+  location: Brussels, Belgium
+  description: A cool and quirky urban bolthole in Brussels, with breakfast and late check-out
+  price: 69
+  price-description: per room per night
+  link: https://www.secretescapes.com/pentahotel-brussels-city-centre-brussels-belgium-europe/sale?utm_source=SE&utm_medium=hub_email&utm_campaign=brussels_20160829
