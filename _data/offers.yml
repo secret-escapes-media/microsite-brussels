@@ -29,3 +29,27 @@
   price: 69
   price-description: per room per night
   link: https://www.secretescapes.com/pentahotel-brussels-city-centre-brussels-belgium-europe/sale?utm_source=SE&utm_medium=hub_email&utm_campaign=brussels_20160829
+
+- title: Pullman Brussels Centre Midi
+  class: pullman-brussels-centre-midi
+  location: Brussels, Belgium
+  description: A luxe stay within the Gare du Midi including breakfast and 4pm check-out - festive dates offered
+  price: 109
+  price-description: per room per night
+  link: https://www.secretescapes.com/pullman-brussels-centre-midi-brussels-belgium/sale?utm_source=SE&utm_medium=hub_email&utm_campaign=brussels_20160829
+
+- title: Stanhope Hotel
+  class: stanhope-hotel
+  location: Brussels, Belgium
+  description: A romantic stay at a five-star Brussels hotel, with breakfast, a choice of rooms and more
+  price: 81
+  price-description: per room per night
+  link: https://www.secretescapes.com/stanhope-hotel-brussels-belgium/sale?utm_source=SE&utm_medium=hub_email&utm_campaign=brussels_20160829
+
+- title: Dominican and the City
+  class: dominican-and-the-city
+  location: Brussels, Belgium
+  description: Offer includes free upgrade, breakfast, "The 500 hidden secrets of Brussels" book, 2 glasses of Champagne and The Dominican & The City box.
+  price: 176
+  price-description: per room per night
+  link: https://www.carlton.nl/en/the-dominican-hotel-brussels/packages/the-dominican-and-the-city
