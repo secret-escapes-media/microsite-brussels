@@ -46,6 +46,14 @@
   price-description: per room per night
   link: https://www.secretescapes.com/stanhope-hotel-brussels-belgium/sale?utm_source=SE&utm_medium=hub_email&utm_campaign=brussels_20160829
 
+- title: Hotel Bloom
+  class: hotel-bloom
+  location: Brussels, Belgium
+  description: A playfully designed hotel in Brussels, with breakfast, a spacious room and more
+  price: 78
+  price-description: per room per night
+  link: https://www.secretescapes.com/hotel-bloom-brussels-belgium/sale?utm_source=SE&utm_medium=hub_email&utm_campaign=brussels_20160916
+
 - title: Dominican and the City
   class: dominican-and-the-city
   location: Brussels, Belgium
